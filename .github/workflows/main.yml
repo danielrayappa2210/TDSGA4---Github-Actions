@@ -28,7 +28,7 @@ jobs:
         run: uv venv && uv pip install httpx lxml cssselect
 
       - name: Run scraper
-        working-directory: .
+        working-directory: ./
         run: python script.py
 
       - name: Commit and push changes
