@@ -28,7 +28,9 @@ jobs:
         run: uv venv && uv pip install httpx lxml cssselect
 
       - name: Make script executable
-        run: chmod +x script.py
+        run: |
+          cd ${{ github.workspace }}  # Change directory to the workspace
+          chmod +x script.py
 
       - name: Run scraper
         run: python script.py
