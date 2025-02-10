@@ -3,7 +3,7 @@ name: Scrape IMDb Top 250
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: "40 5 * * *"
+    - cron: "41 17 * * *"
 
 jobs:
   scrape-imdb:
