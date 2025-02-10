@@ -22,7 +22,24 @@ def scrape_imdb() -> List[Dict[str, str]]:
     movies = []
 
     for item in tree.cssselect(".ipc-metadata-list-summary-item"):
-        # ... (rest of your scraping logic)
+        title = (
+            item.cssselect(".ipc-title__text")[0].text_content()
+            if item.cssselect(".ipc-title__text")
+            else None
+        )
+        year = (
+            item.cssselect(".cli-title-metadata span")[0].text_content()
+            if item.cssselect(".cli-title-metadata span")
+            else None
+        )
+        rating = (
+            item.cssselect(".ipc-rating-star")[0].text_content()
+            if item.cssselect(".ipc-rating-star")
+            else None
+        )
+
+        if title and year and rating:
+            movies.append({"title": title, "year": year, "rating": rating})
 
     return movies
 
