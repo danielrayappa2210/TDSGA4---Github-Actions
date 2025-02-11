@@ -2,7 +2,7 @@ name: Scrape IMDb Top 250
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # Runs daily at 17:40 UTC (11:10 PM IST)
+    - cron: "38 5 * * *"  # Runs daily at 17:40 UTC (11:10 PM IST)
   # For testing, uncomment the following line to trigger on pushes:
   # push:
 
