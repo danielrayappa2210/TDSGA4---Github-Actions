@@ -37,4 +37,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add *.json
           git commit -m "Update IMDb Top 250 data [skip ci]" || exit 0
-          git push origin main -f --token ${{ secrets.GITHUB_TOKEN }}
+          git push https://ghp_********************************@github.com/username/myrepo.git main
