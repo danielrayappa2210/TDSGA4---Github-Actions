@@ -2,7 +2,7 @@ name: Scrape IMDb Top 250
 
 on:
   schedule:
-    - cron: "45 9 * * *"  # Runs daily at 11:00 IST
+    - cron: "05 10 * * *"  # Runs daily at 11:00 IST
   workflow_dispatch:
   # For testing, uncomment the following line to trigger on pushes:
   # push:
@@ -32,7 +32,7 @@ jobs:
         working-directory: ./
         run: python scrape.py
 
-      - name: Commit and push changes
+      - name: Commit and push changes to the github account of daniel.putta@gramener.com
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
