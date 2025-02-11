@@ -22,7 +22,7 @@ jobs:
           python-version: '3.9'  # Or your preferred version
 
       - name: Install dependencies
-        uses: python3 -m pip install httpx lxml csssele
+        run: python -m pip install httpx lxml cssselect
 
       - name: make executable
         run: chmod +x scrape.py
