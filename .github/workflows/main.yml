@@ -28,11 +28,11 @@ jobs:
         run: uv venv && uv pip install httpx lxml cssselect
 
       - name: make executable
-        run: chmod +x script.py
+        run: chmod +x scrape.py
 
       - name: Run scraper
         working-directory: ./
-        run: python script.py
+        run: python scrape.py
 
       - name: Commit and push changes
         run: |
